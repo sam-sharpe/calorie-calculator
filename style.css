@@ -23,12 +23,49 @@ html, body {
     font-size: 16px;
 }
 
+.container {
+  max-width: 800px;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.image.container{
+  max-width: 1200px;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  line-height: 1.3em;
+}
+
+#interactive input {
+  width: 100%;
+}
+
+#interactive .fruit {
+  margin-bottom: 10px;
+}
+
 /*********************************************************************
   YOUR TABLET/DESKTOP STYLES GO HERE
 *********************************************************************/
 @media(min-width: 681px) {
     /* Any adjustments for tablets and larger go here.
     Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+
+#interactive {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#interactive .fruit {
+  flex-basis: 48%;
+}
+
 }
 
 /*********************************************************************
@@ -37,4 +74,9 @@ html, body {
 @media(min-width: 729px) {
     /* Any adjustments for desktop and larger go here.
     Note these styles will be applied to anything 729px or larger -- so desktop */
+
+    #interactive .fruit {
+      flex-basis: 32%;
+    }
+
 }
